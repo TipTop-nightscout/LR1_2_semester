@@ -5,7 +5,7 @@ B = []
 
 def task1_input_globals():
     global N, A, B
-    print("\nЛР 5. Завдання 1")
+    print("\nЛР 5. Task 1")
     try:
         N_input = int(input("Enter N: "))
         A_temp = []
@@ -24,7 +24,7 @@ def task1_input_globals():
         B = B_temp
 
     except ValueError:
-        print("Помилка введення даних.")
+        print("Value error.")
 
 
 def task1_process_globals():
@@ -72,7 +72,7 @@ def task1_process_globals():
 
 
 def task2_process(regions, years, crime_data):
-    print("\nЛР 5. Завдання 2")
+    print("\nЛР 5. Task 2")
     print("Data about crimes:")
     for name, row in zip(regions, crime_data):
         print(f"{name}: {row}")

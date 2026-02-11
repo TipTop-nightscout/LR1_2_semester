@@ -8,7 +8,7 @@ def process_text(text):
     matching = [w for w in words if len(w) > 1 and w[0] == w[-1]]
 
     if matching:
-        print("Знайдені слова (починаються і закінчуються однаково):")
+        print("Words that begin and end with the same letter:")
         for j in matching:
             print(j)
     else:
