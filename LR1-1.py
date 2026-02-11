@@ -7,7 +7,7 @@ B = []
 
 def lab5_task1_input_globals():
     global N, A, B
-    print("\nЛР 5. Завдання 1")
+    print("\nЛР 5. Task 1")
     try:
         N = int(input("Enter N: "))
         A = []
@@ -21,7 +21,7 @@ def lab5_task1_input_globals():
             B.append(bi)
             i += 1
     except ValueError:
-        print("Помилка введення даних.")
+        print("Value error.")
 
 
 def lab5_task1_process_globals():
@@ -67,8 +67,8 @@ def lab5_task1_process_globals():
     else:
         print("Relations between series A and series B is not real")
 
-def lab5_task2_process(regions, years, crime_data):
-    print("\nЛР 5. Завдання 2")
+def lab5_task2_output(regions, years, crime_data):
+    print("\nЛР 5. Task 2")
     print("Data about crimes:")
     for name, row in zip(regions, crime_data):
         print(f"{name}: {row}")
@@ -83,7 +83,7 @@ def lab5_task2_process(regions, years, crime_data):
         max_year = years[row.index(max(row))]
         print(f" **{name}**: {max_year}")
 
-def lab6_process_text(text):
+def lab6(text):
     print("\nЛР 6")
     text_lower = text.lower()
     words = re.findall(r"[a-zA-Zа-яА-ЯёЁіІїЇєЄ]+", text_lower)
@@ -91,7 +91,7 @@ def lab6_process_text(text):
     matching = [w for w in words if len(w) > 1 and w[0] == w[-1]]
 
     if matching:
-        print("Знайдені слова (починаються і закінчуються однаково):")
+        print("Words that begin and end with the same letter:")
         for j in matching:
             print(j)
     else:
@@ -135,7 +135,7 @@ def lab7_menu(cyber_threats):
 
 if __name__ == "__main__":
     while True:
-        print("\n================ Main menu ================")
+        print("\nMain menu")
         print("1. ЛР 5.1")
         print("2. ЛР 5.2")
         print("3. ЛР 6")
@@ -159,11 +159,11 @@ if __name__ == "__main__":
                 [1035, 1622, 1058, 1786, 1472],
                 [1706, 1538, 2141, 2921, 1803]
             ]
-            lab5_task2_process(regions, years, data)
+            lab5_task2_output(regions, years, data)
 
         elif choice == '3':
             text = input("Enter text: ").strip()
-            lab6_process_text(text)
+            lab6(text)
 
         elif choice == '4':
             threats = {
