@@ -8,20 +8,17 @@ B = []
 def lab5_task1_input_globals():
     global N, A, B
     print("\nЛР 5. Task 1")
-    try:
-        N = int(input("Enter N: "))
-        A = []
-        B = []
+    N = int(input("Enter N: "))
+    A = []
+    B = []
 
-        i = 0
-        while i < N:
-            ai = float(input(f"A[{i + 1}]: ").strip())
-            bi = float(input(f"B[{i + 1}]: ").strip())
-            A.append(ai)
-            B.append(bi)
-            i += 1
-    except ValueError:
-        print("Value error.")
+    i = 0
+    while i < N:
+        ai = float(input(f"A[{i + 1}]: ").strip())
+        bi = float(input(f"B[{i + 1}]: ").strip())
+        A.append(ai)
+        B.append(bi)
+        i += 1
 
 
 def lab5_task1_process_globals():
